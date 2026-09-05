@@ -1,0 +1,65 @@
+# --- 데이터 ---
+# 촬영 원본(jpg + ARKit json), 변환 결과(ply) 등은 리포에 포함하지 않음
+data/
+datasets/
+captured_data/
+outputs/
+*.jpg
+*.jpeg
+*.png
+*.ply
+*.pcd
+*.bag
+*.npy
+*.npz
+
+# --- 모델 가중치 ---
+# 용량이 크므로 GitHub Release로 배포
+*.pt
+*.pth
+*.onnx
+*.engine
+weights/
+runs/
+
+# --- 측정 결과 ---
+# 실험 결과는 experiments/results/ 아래 실행 시각 폴더로 쌓인다 (커밋하지 않음).
+# 논문/README에 인용할 확정 결과만 experiments/results_published/ 에 두고 커밋.
+*.csv
+experiments/results/
+!experiments/results_published/
+!experiments/results_published/**
+
+# --- 파이썬 ---
+__pycache__/
+*.py[cod]
+*.so
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# --- 비밀 / 비공개 문서 ---
+.env
+.env.*
+!.env.example
+*.key
+
+# 연구 인수인계 문서. 개인정보(이름/이메일), 논문 투고 전략,
+# 검증 한계 등이 담겨 있어 공개 리포에 올리지 않는다.
+HANDOVER.md
+
+# --- 에디터 / OS ---
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# --- 기타 문서 ---
+*.pptx
+*.hwp
+*.docx

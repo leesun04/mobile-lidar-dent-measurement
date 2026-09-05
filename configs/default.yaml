@@ -1,0 +1,17 @@
+camera:
+  rgb_h: 1920              # fl 스케일 보정용 (fl·해상도는 JSON에서 읽음)
+
+detect:
+  img_size: 640
+
+mask:
+  padding_ratio: 0.80
+  dilation_iter: 1
+  fill_with_hull: true
+  dent_include_bbox: true
+
+ransac:
+  distance_threshold: 0.015
+  ransac_n: 3
+  num_iterations: 100000
+  z_band_m: 0.05

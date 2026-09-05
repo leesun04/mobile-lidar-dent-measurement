@@ -1,0 +1,27 @@
+# iPhone LiDAR 덴트 깊이 측정 - 의존성
+#
+# 개발 환경: Python 3.10.19 (conda env: lsj_yolo)
+#
+# 설치:
+#   pip install -r requirements.txt
+
+# --- 덴트 세그멘테이션 ---
+ultralytics==8.4.6
+ultralytics-thop==2.0.18
+
+# --- PyTorch (ultralytics 백엔드) ---
+torch==2.9.1
+torchvision==0.24.1
+
+# --- 3D 포인트 클라우드 / RANSAC 평면 피팅 ---
+# segment_plane() 사용. 없으면 깊이 계산이 동작하지 않음.
+open3d==0.19.0
+
+# --- 영상 처리 (마스크 생성, 이미지 I/O) ---
+opencv-python==4.13.0.90
+
+# --- 수치 연산 ---
+numpy==2.2.6
+
+# --- 설정 파일 (configs/*.yaml) ---
+PyYAML==6.0.3
